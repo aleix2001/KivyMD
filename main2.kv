@@ -1,0 +1,95 @@
+MDScreen:
+    MDTopAppBar:
+        title: "PymeShield"
+        elevation: 4
+        pos_hint: {"top": 1}
+        md_bg_color: "#ff6720"
+        specific_text_color: "black"
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+    
+    MDNavigationLayout:
+
+        MDScreenManager:
+            id: screen_manager
+            MDScreen:
+                name: "Inicio"
+                MDLabel:
+                    text:"Screen 1"
+                    halign: "center"
+            MDScreen:
+                name: "Questionarios"
+                MDLabel:
+                    text:"Questionarios"
+                    halign: "center"
+            MDScreen:
+                name: "Informes"
+                MDLabel:
+                    text:"Screen 3"
+                    halign: "center"
+            MDScreen:
+                name: "Formacion"
+                MDLabel:
+                    text:"Screen 4"
+                    halign: "center"
+            MDScreen:
+                name: "Contacto"
+                MDLabel:
+                    text:"Screen 5"
+                    halign: "center"
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            BoxLayout:
+                orientation: 'vertical' 
+                ContentNavigationDrawer:
+                    manager: screen_manager
+                    nav_drawer: nav_drawer
+<ContentNavigationDrawer>:
+    MDNavigationDrawerMenu:
+        MDNavigationDrawerHeader:
+            source: 'ImgProva/Captura2.png'
+        DrawerClickableItem:
+            text: "Inicio"
+            on_release: 
+                root.nav_drawer.set_state("close")
+                root.manager.current="Inicio"     
+
+        DrawerClickableItem:
+            text: "Questionarios"
+            on_release: 
+                root.nav_drawer.set_state("close")
+                root.manager.current="Questionarios"  
+
+        DrawerClickableItem:
+            text: "Informes"
+            on_release: 
+                root.nav_drawer.set_state("close")
+                root.manager.current="Informes"  
+        
+        DrawerClickableItem:
+            text: "Formacion"
+            on_release: 
+                root.nav_drawer.set_state("close")
+                root.manager.current="Formacion"  
+
+        DrawerClickableItem:
+            text: "Contacto"
+            on_release: 
+                root.nav_drawer.set_state("close")
+                root.manager.current="Contacto"  
+
+        MDNavigationDrawerDivider:
+
+<DrawerClickableItem@MDNavigationDrawerItem>
+    focus_color: "#e7e4c0"
+    text_color: "#4a4939"
+    icon_color: "#4a4939"
+    ripple_color: "#c5bdd2"
+    selected_color: "#0c6c4d"
+
+<DrawerLabelItem@MDNavigationDrawerItem>
+    text_color: "#4a4939"
+    icon_color: "#4a4939"
+    focus_behavior: False
+    selected_color: "#4a4939"
+    _no_ripple_effect: True
