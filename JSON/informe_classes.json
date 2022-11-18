@@ -1,0 +1,140 @@
+[
+  {
+    "id": 0,
+    "name": "Informe 1 - Pymeralia",
+    "idquestionari": "2",
+    "autor": "El Pep",
+    "data": "2022-09-28",
+    "resultat":[
+      {
+        "id": 1,
+        "pregunta": "Como te llamas?",
+        "resposta": "El Pepe",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 2,
+        "pregunta": "Como va?",
+        "resposta": "Bien!!",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 3,
+        "pregunta": "Si ec?",
+        "resposta": "Si",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 4,
+        "pregunta": "Como te llamas?",
+        "resposta": "El Pepe",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 5,
+        "pregunta": "Como va?",
+        "resposta": "Bien!!",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 6,
+        "pregunta": "Si ec?",
+        "resposta": "Si",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 7,
+        "pregunta": "Como te llamas?",
+        "resposta": "El Pepe",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 8,
+        "pregunta": "Como va?",
+        "resposta": "Bien!!",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 9,
+        "pregunta": "Si ec?",
+        "resposta": "Si",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      },
+
+      {
+        "id": 10,
+        "pregunta": "Compras amigos?",
+        "resposta": "Si",
+        "recomanacio": "El Pep",
+        "nivellrisc": "Molt Pep",
+        "impacte": "Alto",
+        "probabilitat": "Baja",
+        "intervencio": "inmediatament",
+        "tipusmesura": "preventiva",
+        "estat": "In progress"
+      }
+    ]
+  }
+]
