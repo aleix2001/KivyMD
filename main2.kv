@@ -17,9 +17,9 @@ MDScreen:
                     text:"Screen 1"
                     halign: "center"
             MDScreen:
-                name: "Questionarios"
+                name: "Cuestionarios"
                 MDLabel:
-                    text:"Questionarios probando Samuel"
+                    text:"Cuestionarios probando Samuel"
                     halign: "center"
             MDScreen:
                 name: "Informes"
@@ -55,10 +55,10 @@ MDScreen:
                 root.manager.current="Inicio"     
 
         DrawerClickableItem:
-            text: "Questionarios"
+            text: "Cuestionarios"
             on_release: 
                 root.nav_drawer.set_state("close")
-                root.manager.current="Questionarios"  
+                root.manager.current="Cuestionarios"  
 
         DrawerClickableItem:
             text: "Informes"

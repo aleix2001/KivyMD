@@ -11,6 +11,9 @@ from kivymd.uix.screen import MDScreen
 from kivy.properties import ObjectProperty
 from kivymd.uix.scrollview import MDScrollView
 from kivy.clock import Clock
+from kivymd.uix.datatables import MDDataTable #Para crear Tablas de datos
+from kivy.metrics import dp #Para ver el display de pixels
+from kivy.uix.anchorlayout import AnchorLayout
 
 class ContentNavigationDrawer(MDBoxLayout):
     manager = ObjectProperty()
@@ -27,13 +30,20 @@ class DrawerList(ThemableBehavior, MDList):
         instance_item.text_color = self.theme_cls.primary_color
         
 
-
 class MyApp (MDApp):    
     def build(self):
         self.title = "PymeShield"
         Window.size = (400, 600)
         scroll = ScrollView()
-
+        
+        layout = AnchorLayout()
+        self.data_tables = MDDataTable(
+            size_hint=(0.7, 0.6),
+            use_pagination=True,
+            check=True,
+            column_data=[]
+        )
+        
         list_view = MDList()
         for i in range(20):
 
@@ -41,6 +51,7 @@ class MyApp (MDApp):
             list_view.add_widget(items)
 
         scroll.add_widget(list_view)
+        layout.add_widget(self.data_tables)
 
         return Builder.load_file("main2.kv")
 
