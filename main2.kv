@@ -14,28 +14,31 @@ MDScreen:
             MDScreen:
                 name: "Inicio"
                 MDLabel:
-                    text:"Screen 1"
+                    text:"Splash Screen"
                     halign: "center"
+                Image:
+                    source: 'Images/questionary.png'
             MDScreen:
                 name: "Cuestionarios"
-                MDLabel:
-                    text:"Cuestionarios probando Samuel"
-                    halign: "center"
+                MDBoxLayout:
+                    padding:0, 70, 0, 0
+                    MDScrollView:
+                        MDList:
+                            id: cuestionarios       
             MDScreen:
                 name: "Informes"
-                MDLabel:
-                    text:"Screen 3"
-                    halign: "center"
-            MDScreen:
-                name: "Formacion"
-                MDLabel:
-                    text:"Screen 4"
-                    halign: "center"
+                MDBoxLayout:
+                    padding:0, 70, 0, 0
+                    MDScrollView:
+                        MDList:
+                            id: informes
+                            
             MDScreen:
                 name: "Contacto"
                 MDLabel:
-                    text:"Screen 5"
                     halign: "center"
+                Image:
+                    source: 'Images/telefono-contacto.png'
 
         MDNavigationDrawer:
             id: nav_drawer
@@ -47,32 +50,37 @@ MDScreen:
 <ContentNavigationDrawer>:
     MDNavigationDrawerMenu:
         MDNavigationDrawerHeader:
-            source: 'ImgProva/Captura2.png'
+            title: "Pymeralia"
+            source: "Images/logo.png"
+            spacing: "4dp"
+            padding: "12dp", 0, 0, "56dp"
+
+        MDNavigationDrawerLabel:
+            text: "Pymeralia-Equip2-Sprint 2"    
+
         DrawerClickableItem:
+            icon: "home"
             text: "Inicio"
             on_release: 
                 root.nav_drawer.set_state("close")
                 root.manager.current="Inicio"     
 
         DrawerClickableItem:
+            icon: "table"
             text: "Cuestionarios"
             on_release: 
                 root.nav_drawer.set_state("close")
                 root.manager.current="Cuestionarios"  
 
         DrawerClickableItem:
+            icon: "form-select"
             text: "Informes"
             on_release: 
                 root.nav_drawer.set_state("close")
                 root.manager.current="Informes"  
         
         DrawerClickableItem:
-            text: "Formacion"
-            on_release: 
-                root.nav_drawer.set_state("close")
-                root.manager.current="Formacion"  
-
-        DrawerClickableItem:
+            icon: "card-account-phone"
             text: "Contacto"
             on_release: 
                 root.nav_drawer.set_state("close")

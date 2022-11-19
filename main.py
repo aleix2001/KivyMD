@@ -11,9 +11,8 @@ from kivymd.uix.screen import MDScreen
 from kivy.properties import ObjectProperty
 from kivymd.uix.scrollview import MDScrollView
 from kivy.clock import Clock
-from kivymd.uix.datatables import MDDataTable #Para crear Tablas de datos
-from kivy.metrics import dp #Para ver el display de pixels
-from kivy.uix.anchorlayout import AnchorLayout
+from kivymd.uix.list import ThreeLineIconListItem, IconLeftWidget #import para crear listas (cambia dependiendo de los campos que queremos que tenga la lista), le pasamos diferentes imports de la misma biblioteca
+
 
 class ContentNavigationDrawer(MDBoxLayout):
     manager = ObjectProperty()
@@ -36,14 +35,6 @@ class MyApp (MDApp):
         Window.size = (400, 600)
         scroll = ScrollView()
         
-        layout = AnchorLayout()
-        self.data_tables = MDDataTable(
-            size_hint=(0.7, 0.6),
-            use_pagination=True,
-            check=True,
-            column_data=[]
-        )
-        
         list_view = MDList()
         for i in range(20):
 
@@ -51,9 +42,32 @@ class MyApp (MDApp):
             list_view.add_widget(items)
 
         scroll.add_widget(list_view)
-        layout.add_widget(self.data_tables)
-
-        return Builder.load_file("main2.kv")
-
+        return Builder.load_file("main2.kv")##importacion de estilos
+    
+    def on_start(self): #creamos la clase on_start
+        for i in range(10): #bucle que recorre el rango que le pasemos como parametro
+            self.root.ids.cuestionarios.add_widget( #añade widgets, despues de ids. va el id con el que podremos trabajar en el documento .kv
+                ThreeLineIconListItem( #método que nos deja trabajar con 3 lineas que previamente lo hemos importado en la parte superior
+                    IconLeftWidget( #método que nos permite agregar un icono
+                        icon="table"
+                    ),
+                    text=f"Questionary {i}", #línea 1
+                    secondary_text=f"Autor {i}", #línea 2
+                    tertiary_text=f"Fecha {i}", #línea 3
+                )
+            )## Lista que muestra los cuestionarios
+    
+        for i in range(10):
+            self.root.ids.informes.add_widget(
+                ThreeLineIconListItem(
+                    IconLeftWidget(
+                        icon="form-select"
+                    ),
+                    text=f"Informe {i}",
+                    secondary_text=f"Autor {i}",
+                    tertiary_text=f"Fecha {i}",
+                )
+            )## Lista que muestra los informes    
+            
 
 MyApp().run()
